@@ -4,16 +4,6 @@
 
 ### Exercise 1
 ```bash
-User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises (master)
-$ mkdir NewProject
-
-User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises (master)
-$ cd NewProject
-
-User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/NewProject (master)
-$ git init
-Initialized empty Git repository in C:/Users/User/Documents/Project/The Gym/Git Exercises/
-
 
 User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises (master)
 $ mkdir Exercise1
