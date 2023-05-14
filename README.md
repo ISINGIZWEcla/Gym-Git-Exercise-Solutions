@@ -173,3 +173,98 @@ To https://github.com/ISINGIZWEcla/Exercise1.git
 User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
 $
 ```
+### Exercise 2
+
+```bash
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git add home.html
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git stash save "stash saving home pahe"
+Saved working directory and index state On dev: stash saving home pahe
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git add about.html
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git stash save "stash saving about page"
+Saved working directory and index state On dev: stash saving about page
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git add team.html
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git stash save "stash saving team page"
+Saved working directory and index state On dev: stash saving team page
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git stash list
+stash@{0}: On dev: stash saving team page
+stash@{1}: On dev: stash saving about page
+stash@{2}: On dev: stash saving home pahe
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (92de7c90fb67737d41d820b743336c6fb9e1f58b)
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (6c138dce4e0cf8120116449d3c93ed6349878a6e)
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git commit -m "Adding home and about pages"
+[dev f298e9e] Adding home and about pages
+ 2 files changed, 276 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git push remote dev
+fatal: 'remote' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git push orgin dev
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.81 KiB | 371.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/ISINGIZWEcla/Exercise1.git
+   e0bd1b5..f298e9e  dev -> dev
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git stash list
+stash@{0}: On dev: stash saving team page
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git stash pop
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped refs/stash@{0} (590fa05124bee8dcc173fbe68527f4b20934f97d)
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$ git reset --hard
+HEAD is now at f298e9e Adding home and about pages
+
+User@DESKTOP-I1ARRFM MINGW64 ~/Documents/Project/The Gym/Git Exercises/Exercise1 (dev)
+$
+```
